@@ -20,6 +20,18 @@ def read_csv(csv_file):
     print('finish process csv file...')
     return list_all,list_sub
 
+def transfer_format(totla_list):
+    return_list = []
+    for k in total_list.keys():
+        lenth = len(total_list[k])
+        print('start process label {}'.format(k))
+        random.shuffle(total_list[k])
+        tmp = []
+        for i in trange(lenth):
+            tmp.append(total_list[k][i])
+        return_list.append(tmp)
+    return return_list
+
 def split_train_val(total_list):
     #处理划分train,val，并转存为txt
     train,test = [],[]
@@ -47,6 +59,6 @@ def write_file(file_path,item_list):
     
 if __name__ == '__main__':
     list_all,list_sub = read_csv('dev.csv')
-    train,test = split_train_val(list_sub)
+    #train,test = split_train_val(list_sub)
+    train = transfer_format(list_sub)
     write_file('/mnt/lustre/liyukun/competition/textclassification/Chinese-Text-Classification-Pytorch/tmpdataset/data/train.txt',train)
-    write_file('/mnt/lustre/liyukun/competition/textclassification/Chinese-Text-Classification-Pytorch/tmpdataset/data/test.txt',test)
