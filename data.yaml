@@ -1,0 +1,42 @@
+path: /data/workspace/myshixun/data
+train: images/train  # train images (relative to 'path') 128 images
+val: images/test  # val images (relative to 'path') 128 images
+test:  images/test
+
+# Classes
+names:
+         0 : A10
+         1 : AG600
+         2 : B1
+         3 : B2
+         4 : B52
+         5 : Be200
+         6 : C130
+         7 : C17
+         8 : C5
+         9 : E2
+         10 : EF2000
+         11 : F117
+         12 : F14
+         13 : F15
+         14 : F16
+         15 : F18
+         16 : F22
+         17 : F35
+         18 : F4
+         19 : J20
+         20 : JAS39
+         21 : Mig31
+         22 : MQ9
+         23 : Mirage2000
+         24 : RQ4
+         25 : Rafale
+         26 : SR71
+         27 : Su57
+         28 : Tu160
+         29 : Tu95
+         30 : U2
+         31 : US2
+         32 : V22
+         33 : XB70
+         34 : YF23
