@@ -1,3 +1,4 @@
+ultralytics
 path: /data/workspace/myshixun/data
 train: images/train  # train images (relative to 'path') 128 images
 val: images/test  # val images (relative to 'path') 128 images
